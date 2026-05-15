@@ -145,10 +145,10 @@ If you use this code, please cite the associated manuscript (citation details wi
 
 ## License
 
-This code is released under the [MIT License](LICENSE).
+To be determined upon publication.
 
 ---
 
 ## Contact
 
-For questions about the analysis, please open a GitHub Issue or contact **Bowen Liu** at bowen.liu@umkc.edu.
+For questions about the analysis, please open a GitHub Issue or contact **Ailing Nan** at anzcc@umkc.edu.
