@@ -48,8 +48,7 @@ To request the analysis-ready dataset (`AHC_DT_CVD.csv`), please contact:
 > School of Science and Engineering, University of Missouri–Kansas City  
 > 📧 bowen.liu@umkc.edu
 
-Please include a brief description of your intended use in your request. Data requests are subject to institutional review.
-
+Please include a brief description of your intended use in your request.
 ---
 
 ## Reproducing the Analysis
