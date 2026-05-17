@@ -28,12 +28,12 @@ All models adjusted for age group, sex, race/ethnicity, and COVID-19-related ED 
 .
 ├── README.md
 ├── requirements.txt
-├── .gitignore
 ├── data/
 │   └── README.md           ← Data access instructions
-└── notebooks/
-    ├── _Table.ipynb         ← Descriptive tables (Tables 1–3)
-    └── _Model.ipynb         ← Statistical models and forest plot (Tables 4–6, Figure 2)
+└── src/
+    ├── 01_tables.py            → Tables 1–3 (descriptive statistics)
+    ├── 02_models.py            → Models 1–3, Tables 4–6, and Figure 2 (forest plot)
+    └── 03_supplementary.py         → eTables 1–4 and PARF calculations
 ```
 
 ---
