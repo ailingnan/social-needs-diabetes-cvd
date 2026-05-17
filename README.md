@@ -60,8 +60,8 @@ To request the analysis-ready dataset (`AHC_DT_CVD.csv`), please contact:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/ailingnan/social-needs-diabetes-cvd.git
+cd social-needs-diabetes-cvd
 ```
 
 ### 2. Install dependencies
@@ -79,20 +79,23 @@ data/
 └── AHC_DT_CVD.csv
 ```
 
-### 4. Run the notebooks
+### 4. Run the scripts
 
-Launch Jupyter and run the notebooks in order:
+Run the three scripts in order from the repository root:
 
 ```bash
-jupyter notebook
+python src/01_tables.py
+python src/02_models.py
+python src/03_supplementary.py
 ```
 
-| Step | Notebook | Description | Output |
-|------|----------|-------------|--------|
-| 1 | `notebooks/_Table.ipynb` | Descriptive statistics, social needs prevalence, unadjusted ED rates | `Table1_patient_characteristics.csv`, `Table1_chi_square_tests.csv`, `Table2_*.csv`, `Table3_*.csv` |
-| 2 | `notebooks/_Model.ipynb` | Negative binomial GLMs (Models 1–3), forest plot, VIF check | `Table3_results.csv`, `IRR_forest_plot_updated.png` |
+All outputs are saved automatically to `outputs/`.
 
-> **Note:** The notebooks expect the data file at `../data/AHC_DT_CVD.csv` relative to the `notebooks/` directory. Update the `pd.read_csv(...)` path if your working directory differs.
+| Step | Script | Description | Outputs |
+|------|--------|-------------|---------|
+| 1 | `src/01_tables.py` | Descriptive statistics, social needs prevalence, unadjusted ED rates | `Table1_patient_characteristics.csv`, `Table1_chi_square_tests.csv`, `Table2_social_needs_utilization.csv`, `Table3_unadjusted_rates.csv` |
+| 2 | `src/02_models.py` | Negative binomial GLMs (Models 1–3), result tables, forest plot | `Table4_model1_any_need.csv`, `Table5_model2_domain_specific.csv`, `Table6_model3_need_burden.csv`, `Figure2_IRR_forest_plot.png` |
+| 3 | `src/03_supplementary.py` | Housing co-occurrence, VIF/correlation matrix, PARF projections | `eTable1_housing_cooccurrence.csv`, `eTable2_correlations_vif.csv`, `eTable3_projection_parameters.csv`, `eTable4_parf_projections.csv` |
 
 ---
 
@@ -107,32 +110,13 @@ jupyter notebook
 | `ever_tr` | Binary: transportation need ever reported |
 | `ever_sf` | Binary: interpersonal safety need ever reported |
 | `ever_ut` | Binary: utilities need ever reported |
-| `ever_hs` | Binary: any housing need ever reported |
 | `need_rate` | Social need burden (total positive domain screens ÷ total screenings) |
-| `housing_instability` | Derived in `_Model.ipynb`: no steady housing OR worried about losing housing |
-| `ever_hs_quality` | Derived in `_Model.ipynb`: any housing quality problem ever reported |
+| `housing_instability` | Derived in `02_models.py`: no steady housing OR worried about losing housing |
+| `ever_hs_quality` | Derived in `02_models.py`: any housing quality problem ever reported |
 | `COVID_ED_window` | Count of COVID-19-related ED visits during the screening window (covariate) |
 | `age4_cat` | Age group at first screening: Minor (<19), Adult (19–44), Middle-aged (45–64), Aged (≥65) |
 | `gender` | Sex (Female / Male) |
 | `race` | Race/ethnicity (White NH, Black/AfAm NH, Hispanic, Asian/PacIslander, Other) |
-
----
-
-## Key Findings
-
-- Patients reporting **any social need** had a **31% higher rate** of diabetes-related cardiovascular ED visits (IRR 1.31, 95% CI 1.03–1.66, *p* = .029)
-- **Food insecurity** (IRR 1.48), **interpersonal safety needs** (IRR 2.79), and **transportation barriers** (IRR 1.36) were each independently associated with higher ED visit rates
-- **Social need burden** showed a dose-response relationship (IRR 1.19 per 1-unit increase, *p* = .002)
-
----
-
-## Software and Statistical Methods
-
-- **Language:** Python 3.12
-- **Key packages:** `pandas`, `numpy`, `statsmodels` 0.14.4, `scipy`, `matplotlib`
-- **Models:** Negative binomial GLM with log-link and log(window duration) offset (`statsmodels.formula.api.glm` + `sm.families.NegativeBinomial`)
-- **Standard errors:** Heteroskedasticity-consistent (HC0 robust)
-- **Unadjusted comparisons:** Mann–Whitney U test
 
 ---
 
