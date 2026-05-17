@@ -13,9 +13,9 @@ Three negative binomial generalized linear models (with log-offset for screening
 
 | Model | Exposure |
 |-------|----------|
-| Model  1 | Any social need ever reported (binary) |
-| Model  2 | Domain-specific needs ever reported (food, transportation, safety, utilities, housing instability, housing quality problems) |
-| Model  3 | Social need burden (continuous: average number of positive domains per screening) |
+| Model 1 | Any social need ever reported (binary) |
+| Model 2 | Domain-specific needs ever reported (food, transportation, safety, utilities, housing instability, housing quality problems) |
+| Model 3 | Social need burden (continuous: average number of positive domains per screening) |
 
 All models adjusted for age group, sex, race/ethnicity, and COVID-19-related ED visits during the screening window.
 
