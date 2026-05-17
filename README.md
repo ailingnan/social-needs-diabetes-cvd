@@ -15,7 +15,7 @@ Three negative binomial generalized linear models (with log-offset for screening
 |-------|----------|
 | Model 1 | Any social need ever reported (binary) |
 | Model 2 | Domain-specific needs ever reported (food, transportation, safety, utilities, housing instability, housing quality problems) |
-| Model 3 | Social need burden (continuous: average number of positive domains per screening) |
+| Model 3 | Social need burden (continuous: average number of positive social need domains per screening) |
 
 All models adjusted for age group, sex, race/ethnicity, and COVID-19-related ED visits during the screening window.
 
@@ -109,7 +109,7 @@ All outputs are saved automatically to `outputs/`.
 | `ever_tr` | Binary: transportation need ever reported |
 | `ever_sf` | Binary: interpersonal safety need ever reported |
 | `ever_ut` | Binary: utilities need ever reported |
-| `need_rate` | Social need burden (total positive domain screens ÷ total screenings) |
+| `need_rate` | Social need burden (average number of positive social need domains per screening) |
 | `housing_instability` | Derived in `02_models.py`: no steady housing OR worried about losing housing |
 | `ever_hs_quality` | Derived in `02_models.py`: any housing quality problem ever reported |
 | `COVID_ED_window` | Count of COVID-19-related ED visits during the screening window (covariate) |
