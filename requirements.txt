@@ -1,7 +1,7 @@
-pandas>=2.0.0
-numpy>=1.24.0
+pandas==2.2.3
+numpy==2.2.6
 statsmodels==0.14.4
-scipy>=1.11.0
-matplotlib>=3.7.0
-jupyter>=1.0.0
-ipykernel>=6.0.0
+scipy==1.13.1
+matplotlib==3.10.9
+jupyter==1.1.1
+ipykernel==7.2.0
