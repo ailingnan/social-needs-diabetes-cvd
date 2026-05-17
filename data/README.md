@@ -10,7 +10,7 @@ To reproduce the analyses:
 git clone https://github.com/ailingnan/social-needs-diabetes-cvd.git
 ```
 
-2. Request the dataset from Dr. Liu.
+2. Request the dataset from **Dr. Liu** (bowen.liu@umkc.edu).
 
 3. Place the dataset file in this `data/` folder.
 
