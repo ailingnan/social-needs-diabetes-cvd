@@ -127,7 +127,7 @@ If you use this code, please cite the associated manuscript (citation details wi
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0).
 
 ---
 
