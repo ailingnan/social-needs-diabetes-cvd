@@ -22,8 +22,3 @@ AHC_DT_CVD.csv
 
 4. Run the scripts in the `src/` directory.
 
-Example:
-
-```bash
-python src/02_models.py
-```
