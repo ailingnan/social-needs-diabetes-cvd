@@ -56,7 +56,6 @@ Please include a brief description of your intended use in your request.
 ### Prerequisites
 
 - Python 3.12
-- Jupyter Notebook or JupyterLab
 
 ### 1. Clone the repository
 
