@@ -2,7 +2,6 @@
 
 > **Nan A, Liu B, Fu MR, Wiest D, Qiu Z.**  
 > *Health-Related Social Needs and Emergency Department Utilizations for Diabetes-Related Cardiovascular Disease: Evidence from Southern New Jersey.*  
-> [Manuscript under review]
 
 ---
 
